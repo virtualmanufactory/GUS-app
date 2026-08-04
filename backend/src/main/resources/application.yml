@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: gus-bdl-app
+
+bdl:
+  api:
+    base-url: https://bdl.stat.gov.pl/api/v1
+    client-id: ${BDL_CLIENT_ID:}
+    default-page-size: 20
+
+cors:
+  allowed-origins: http://localhost:5173

@@ -1,0 +1,6 @@
+# Skopiuj jako application-local.yml i uzupełnij klucz API
+# Rejestracja: https://api.stat.gov.pl/Home/BdlApi
+
+bdl:
+  api:
+    client-id: twoj-klucz-api-tutaj

@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+target/
+
+# Build
+dist/
+build/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local config (may contain API keys)
+application-local.yml
+.env
+.env.local
+
+# Logs
+*.log
