@@ -23,7 +23,7 @@ $env:BDL_CLIENT_ID="twoj-klucz-api"
 export BDL_CLIENT_ID="twoj-klucz-api"
 ```
 
-Alternatywnie skopiuj `backend/src/main/resources/application-local.yml.example` jako `application-local.yml` i uzupełnij klucz.
+Alternatywnie skopiuj `backend/src/main/resources/application-local.properties.example` jako `application-local.properties` i uzupełnij klucz.
 
 ## Uruchomienie
 
@@ -56,7 +56,7 @@ gus/
 │   │   ├── dto/                # Modele odpowiedzi BDL
 │   │   └── service/            # Logika biznesowa
 │   └── src/main/resources/
-│       └── application.yml
+│       └── application.properties
 ├── frontend/                   # React + Vite
 │   └── src/
 │       ├── api/                # Warstwa komunikacji z backendem

@@ -16,7 +16,7 @@ build/
 Thumbs.db
 
 # Local config (may contain API keys)
-application-local.yml
+application-local.properties
 .env
 .env.local
 

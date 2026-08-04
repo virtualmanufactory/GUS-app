@@ -8,6 +8,6 @@ mvn spring-boot:run
 
 ## Konfiguracja
 
-Ustaw zmienną środowiskową `BDL_CLIENT_ID` lub skopiuj `application-local.yml.example` → `application-local.yml`.
+Ustaw zmienną środowiskową `BDL_CLIENT_ID` lub skopiuj `application-local.properties.example` → `application-local.properties`.
 
 Klucz API rejestrujesz na: https://api.stat.gov.pl/Home/BdlApi
