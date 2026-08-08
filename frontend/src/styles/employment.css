@@ -1,0 +1,141 @@
+.employment-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.employment-header h2 {
+  margin: 0 0 0.35rem;
+  color: #5b21b6;
+  font-size: 1.6rem;
+}
+
+.employment-subtitle {
+  margin: 0;
+  color: #64748b;
+}
+
+.employment-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.employment-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 220px;
+  flex: 1;
+}
+
+.employment-filter span {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.employment-filter select {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background: #fff;
+}
+
+.employment-kpi-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.employment-kpi {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.employment-kpi-label {
+  font-size: 0.85rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.employment-kpi-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.1;
+}
+
+.employment-kpi-industry {
+  font-size: 1.1rem;
+  line-height: 1.35;
+}
+
+.employment-kpi-meta {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.employment-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1rem;
+}
+
+.employment-chart-card h3,
+.employment-table-card h3 {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  color: #1e3a5f;
+}
+
+.employment-table-wrap {
+  overflow-x: auto;
+}
+
+.employment-table td:first-child,
+.employment-table th:first-child {
+  width: 2rem;
+}
+
+.employment-empty {
+  color: #64748b;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.employment-source {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.dashboard-error {
+  padding: 2rem;
+  text-align: center;
+  color: #dc2626;
+}
+
+.dashboard-error-hint {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.btn-back {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #5b21b6;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+@media (max-width: 960px) {
+  .employment-grid {
+    grid-template-columns: 1fr;
+  }
+}

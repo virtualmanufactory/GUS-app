@@ -88,6 +88,24 @@ describe('bdlApi', () => {
     );
   });
 
+  it('getDataByUnit appends varId and year params', async () => {
+    vi.mocked(fetch).mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        totalRecords: 1,
+        unitId: '071400000000',
+        unitName: 'MAZOWIECKIE',
+        results: [],
+      }),
+    } as Response);
+
+    await bdlApi.getDataByUnit('071400000000', [155530, 155654], [2022]);
+
+    expect(fetch).toHaveBeenCalledWith(
+      '/api/data/by-unit/071400000000?varId=155530&varId=155654&year=2022',
+    );
+  });
+
   it('throws error when response is not ok', async () => {
     vi.mocked(fetch).mockResolvedValue({
       ok: false,

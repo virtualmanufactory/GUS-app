@@ -23,17 +23,13 @@
   "nav": {
     "home": "Start",
     "population": "Populacja",
-    "subjects": "Tematy",
-    "variables": "Zmienne",
-    "units": "Jednostki"
+    "employment": "Zatrudnienie"
   },
   "home": {
     "title": "GusCompanyFinder",
     "description": "Przeglądaj dane statystyczne GUS o gospodarce, społeczeństwie i środowisku dla gmin, powiatów, województw i całej Polski.",
     "populationDashboard": "Dashboard populacji",
-    "browseSubjects": "Przeglądaj tematy",
-    "searchVariables": "Szukaj zmiennych",
-    "territorialUnits": "Jednostki terytorialne"
+    "employmentSearch": "Zatrudnienie i branże"
   },
   "subjects": {
     "title": "Tematy główne",
@@ -53,6 +49,44 @@
   },
   "data": {
     "noDataForVariable": "Brak danych dla tej zmiennej"
+  },
+  "employment": {
+    "title": "Zatrudnienie i dominujące branże",
+    "subtitle": "Liczba pracujących według sekcji PKD w wybranym województwie (statystyka strukturalna biznesu GUS).",
+    "loading": "Ładowanie danych o zatrudnieniu...",
+    "loadError": "Nie udało się pobrać danych o zatrudnieniu",
+    "backendHint": "Upewnij się, że backend Spring Boot działa na porcie 8080.",
+    "voivodeship": "Województwo",
+    "year": "Rok",
+    "totalEmployed": "Pracujący łącznie",
+    "topIndustry": "Dominująca branża",
+    "ofTotal": "całości",
+    "chartTitle": "Największe branże wg liczby pracujących",
+    "rankingTitle": "Ranking branż",
+    "section": "Sekcja",
+    "industry": "Branża",
+    "employed": "Pracujących",
+    "share": "Udział",
+    "noIndustryData": "Brak danych branżowych dla wybranego roku",
+    "source": "Źródło: GUS BDL – statystyka strukturalna według PKD (jednostki lokalne), poziom województw.",
+    "industries": {
+      "sectionB": "Górnictwo i wydobywanie",
+      "sectionC": "Przetwórstwo przemysłowe",
+      "sectionD": "Energia elektryczna i paliwa",
+      "sectionE": "Dostawa wody i gospodarka ściekami",
+      "sectionF": "Budownictwo",
+      "sectionG": "Handel hurtowy i detaliczny",
+      "sectionH": "Transport i magazynowanie",
+      "sectionI": "Zakwaterowanie i gastronomia",
+      "sectionJ": "Informacja i komunikacja",
+      "sectionK": "Finanse i ubezpieczenia",
+      "sectionL": "Działalność związana z nieruchomościami",
+      "sectionM": "Działalność profesjonalna i techniczna",
+      "sectionN": "Usługi admin. i wspierające",
+      "sectionP": "Edukacja",
+      "sectionQ": "Opieka zdrowotna i pomoc społeczna",
+      "sectionR": "Kultura, sport i rekreacja"
+    }
   },
   "population": {
     "title": "Populacja w Polsce na przestrzeni lat",

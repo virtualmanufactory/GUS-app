@@ -23,17 +23,13 @@
   "nav": {
     "home": "Home",
     "population": "Population",
-    "subjects": "Subjects",
-    "variables": "Variables",
-    "units": "Units"
+    "employment": "Employment"
   },
   "home": {
     "title": "GusCompanyFinder",
     "description": "Browse GUS statistical data on the economy, society and environment for municipalities, counties, voivodeships and all of Poland.",
     "populationDashboard": "Population dashboard",
-    "browseSubjects": "Browse subjects",
-    "searchVariables": "Search variables",
-    "territorialUnits": "Territorial units"
+    "employmentSearch": "Employment & industries"
   },
   "subjects": {
     "title": "Main subjects",
@@ -53,6 +49,44 @@
   },
   "data": {
     "noDataForVariable": "No data for this variable"
+  },
+  "employment": {
+    "title": "Employment and dominant industries",
+    "subtitle": "Number of persons employed by NACE section in the selected voivodeship (GUS structural business statistics).",
+    "loading": "Loading employment data...",
+    "loadError": "Failed to load employment data",
+    "backendHint": "Make sure the Spring Boot backend is running on port 8080.",
+    "voivodeship": "Voivodeship",
+    "year": "Year",
+    "totalEmployed": "Total employed",
+    "topIndustry": "Dominant industry",
+    "ofTotal": "of total",
+    "chartTitle": "Largest industries by employment",
+    "rankingTitle": "Industry ranking",
+    "section": "Section",
+    "industry": "Industry",
+    "employed": "Employed",
+    "share": "Share",
+    "noIndustryData": "No industry data for the selected year",
+    "source": "Source: GUS BDL – structural statistics by NACE (local units), voivodeship level.",
+    "industries": {
+      "sectionB": "Mining and quarrying",
+      "sectionC": "Manufacturing",
+      "sectionD": "Electricity and gas supply",
+      "sectionE": "Water supply and sewerage",
+      "sectionF": "Construction",
+      "sectionG": "Wholesale and retail trade",
+      "sectionH": "Transportation and storage",
+      "sectionI": "Accommodation and food service",
+      "sectionJ": "Information and communication",
+      "sectionK": "Financial and insurance",
+      "sectionL": "Real estate activities",
+      "sectionM": "Professional and technical activities",
+      "sectionN": "Administrative and support services",
+      "sectionP": "Education",
+      "sectionQ": "Health and social work",
+      "sectionR": "Arts, entertainment and recreation"
+    }
   },
   "population": {
     "title": "Population in Poland over the years",

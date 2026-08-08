@@ -21,14 +21,8 @@ export default function Layout() {
           <Link to="/population" className={isActive('/population') ? 'active' : ''}>
             {t('nav.population')}
           </Link>
-          <Link to="/subjects" className={isActive('/subjects') ? 'active' : ''}>
-            {t('nav.subjects')}
-          </Link>
-          <Link to="/variables" className={isActive('/variables') ? 'active' : ''}>
-            {t('nav.variables')}
-          </Link>
-          <Link to="/units" className={isActive('/units') ? 'active' : ''}>
-            {t('nav.units')}
+          <Link to="/employment" className={isActive('/employment') ? 'active' : ''}>
+            {t('nav.employment')}
           </Link>
         </nav>
         <LanguageSwitcher />

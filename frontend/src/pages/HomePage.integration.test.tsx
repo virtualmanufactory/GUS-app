@@ -17,17 +17,9 @@ describe('HomePage integration', () => {
       'href',
       '/population',
     );
-    expect(screen.getByRole('link', { name: 'Przeglądaj tematy' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: 'Zatrudnienie i branże' })).toHaveAttribute(
       'href',
-      '/subjects',
-    );
-    expect(screen.getByRole('link', { name: 'Szukaj zmiennych' })).toHaveAttribute(
-      'href',
-      '/variables',
-    );
-    expect(screen.getByRole('link', { name: 'Jednostki terytorialne' })).toHaveAttribute(
-      'href',
-      '/units',
+      '/employment',
     );
   });
 });

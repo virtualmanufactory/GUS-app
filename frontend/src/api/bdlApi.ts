@@ -1,4 +1,4 @@
-import type { DataByVariable, PageResponse, Subject, Unit, Variable } from '../types/bdl';
+import type { DataByUnit, DataByVariable, PageResponse, Subject, Unit, Variable } from '../types/bdl';
 
 const API_BASE = '/api';
 
@@ -54,6 +54,18 @@ export const bdlApi = {
     unitIds?.forEach((id) => params.append('unitId', id));
     const query = params.toString();
     return fetchJson(`${API_BASE}/data/by-variable/${variableId}${query ? `?${query}` : ''}`);
+  },
+
+  getDataByUnit(
+    unitId: string,
+    variableIds?: number[],
+    years?: number[],
+  ): Promise<DataByUnit> {
+    const params = new URLSearchParams();
+    variableIds?.forEach((id) => params.append('varId', String(id)));
+    years?.forEach((y) => params.append('year', String(y)));
+    const query = params.toString();
+    return fetchJson(`${API_BASE}/data/by-unit/${unitId}${query ? `?${query}` : ''}`);
   },
 
   getYears(): Promise<{ id: number; name: string }[]> {

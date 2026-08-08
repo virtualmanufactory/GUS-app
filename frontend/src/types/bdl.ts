@@ -51,6 +51,17 @@ export interface DataByVariable {
   results: DataResult[];
 }
 
+export interface DataByUnit {
+  totalRecords: number;
+  unitId: string;
+  unitName: string;
+  results: Array<{
+    id: number;
+    measureUnitId: number;
+    values: DataValue[];
+  }>;
+}
+
 export interface DictionaryItem {
   id: number | string;
   name: string;

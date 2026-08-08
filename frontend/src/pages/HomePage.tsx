@@ -12,9 +12,7 @@ export default function HomePage() {
       <p>{t('home.description')}</p>
       <div className="hero-links">
         <Link to="/population">{t('home.populationDashboard')}</Link>
-        <Link to="/subjects">{t('home.browseSubjects')}</Link>
-        <Link to="/variables">{t('home.searchVariables')}</Link>
-        <Link to="/units">{t('home.territorialUnits')}</Link>
+        <Link to="/employment">{t('home.employmentSearch')}</Link>
       </div>
     </div>
   );
