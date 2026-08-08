@@ -75,16 +75,16 @@ describe('bdlApi', () => {
     expect(result.results[0].id).toBe('K3');
   });
 
-  it('getDataByVariable appends year params', async () => {
+  it('getDataByVariable appends year and unitId params', async () => {
     vi.mocked(fetch).mockResolvedValue({
       ok: true,
       json: async () => sampleData,
     } as Response);
 
-    await bdlApi.getDataByVariable(60641, [2017, 2018]);
+    await bdlApi.getDataByVariable(60641, [2017, 2018], ['071400000000', '011200000000']);
 
     expect(fetch).toHaveBeenCalledWith(
-      '/api/data/by-variable/60641?year=2017&year=2018',
+      '/api/data/by-variable/60641?year=2017&year=2018&unitId=071400000000&unitId=011200000000',
     );
   });
 

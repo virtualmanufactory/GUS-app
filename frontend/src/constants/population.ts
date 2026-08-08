@@ -27,6 +27,11 @@ export const VOIVODESHIPS: Voivodeship[] = [
   { bdlId: '023200000000', nameKey: 'zachodniopomorskie', name: 'ZACHODNIOPOMORSKIE', geoName: 'Zachodniopomorskie', color: '#20b2aa' },
 ];
 
+export const POPULATION_UNIT_IDS = [
+  POLAND_BDL_ID,
+  ...VOIVODESHIPS.map((v) => v.bdlId),
+];
+
 export const POPULATION_YEARS = Array.from({ length: 17 }, (_, i) => 2002 + i);
 
 export const POPULATION_METRICS = [

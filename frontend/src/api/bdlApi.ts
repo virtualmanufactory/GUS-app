@@ -44,9 +44,14 @@ export const bdlApi = {
     return fetchJson(`${API_BASE}/units/${id}`);
   },
 
-  getDataByVariable(variableId: number, years?: number[]): Promise<DataByVariable> {
+  getDataByVariable(
+    variableId: number,
+    years?: number[],
+    unitIds?: string[],
+  ): Promise<DataByVariable> {
     const params = new URLSearchParams();
     years?.forEach((y) => params.append('year', String(y)));
+    unitIds?.forEach((id) => params.append('unitId', id));
     const query = params.toString();
     return fetchJson(`${API_BASE}/data/by-variable/${variableId}${query ? `?${query}` : ''}`);
   },

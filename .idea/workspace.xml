@@ -1,38 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ac81aad-cb97-4877-b26f-42bb2ecb99b2" name="Changes" comment="add test units and integrations">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/LanguageSwitcher.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/useVoivodeshipLabel.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/i18n/i18n.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/i18n/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/i18n/locales/en.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/i18n/locales/pl.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/population/AgeGroupChart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/population/AgeGroupChart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/population/EconomicAgeChart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/population/EconomicAgeChart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/population/GenderChart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/population/GenderChart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/population/MetricSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/population/MetricSelector.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/population/PolandMap.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/population/PolandMap.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/population/PopulationTrendChart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/population/PopulationTrendChart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/population/YearFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/population/YearFilter.tsx" afterDir="false" />
+    <list default="true" id="2ac81aad-cb97-4877-b26f-42bb2ecb99b2" name="Changes" comment="add language in english and Polish">
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/pl/gus/bdl/dto/DataByUnitResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/resources/fixtures/data-by-unit-malopolskie.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/resources/fixtures/data-by-unit-mazowieckie.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/resources/fixtures/data-by-unit-poland.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/resources/fixtures/data-by-unit-slaskie.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/resources/fixtures/data-by-variable-page0.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/resources/fixtures/data-by-variable-page1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/GUS-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/GUS-app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/pl/gus/bdl/client/BdlApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/pl/gus/bdl/client/BdlApiClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/pl/gus/bdl/config/RestClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/pl/gus/bdl/config/RestClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/pl/gus/bdl/dto/DataByVariableResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/pl/gus/bdl/dto/DataByVariableResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/pl/gus/bdl/integration/BdlApiIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/pl/gus/bdl/integration/BdlApiIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/pl/gus/bdl/service/BdlServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/pl/gus/bdl/service/BdlServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/resources/application-test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/api/bdlApi.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/api/bdlApi.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/api/bdlApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/api/bdlApi.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/constants/population.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/constants/population.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/constants/population.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/constants/population.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/hooks/usePopulationData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/hooks/usePopulationData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/DataPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/DataPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/HomePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/PopulationDashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/PopulationDashboard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/SubjectsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/SubjectsPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/UnitsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/UnitsPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/VariablesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/VariablesPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles/population.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/population.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/test/setup.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/test/setup.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tsconfig.app.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.app.tsbuildinfo" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1786185007951</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add language in english and Polish">
+      <created>1786185166700</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1786185166700</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -167,6 +163,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="create basic structure of project" />
     <MESSAGE value="add test units and integrations" />
-    <option name="LAST_COMMIT_MESSAGE" value="add test units and integrations" />
+    <MESSAGE value="add language in english and Polish" />
+    <option name="LAST_COMMIT_MESSAGE" value="add language in english and Polish" />
   </component>
 </project>

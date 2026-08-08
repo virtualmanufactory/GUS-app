@@ -4,6 +4,7 @@ import { bdlApi } from '../api/bdlApi';
 import {
   AGE_0_4_VARIABLES,
   POPULATION_METRICS,
+  POPULATION_UNIT_IDS,
   POPULATION_YEARS,
 } from '../constants/population';
 import type { DataByVariable } from '../types/bdl';
@@ -24,10 +25,10 @@ export function usePopulationData() {
     setError(null);
     try {
       const metricRequests = POPULATION_METRICS.map((metric) =>
-        bdlApi.getDataByVariable(metric.variableId, POPULATION_YEARS),
+        bdlApi.getDataByVariable(metric.variableId, POPULATION_YEARS, POPULATION_UNIT_IDS),
       );
       const ageRequests = AGE_0_4_VARIABLES.map((variableId) =>
-        bdlApi.getDataByVariable(variableId, POPULATION_YEARS),
+        bdlApi.getDataByVariable(variableId, POPULATION_YEARS, POPULATION_UNIT_IDS),
       );
 
       const [metricResults, ageResults] = await Promise.all([

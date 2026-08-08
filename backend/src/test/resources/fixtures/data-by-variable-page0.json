@@ -1,0 +1,21 @@
+{
+  "totalRecords": 4247,
+  "variableId": 60641,
+  "measureUnitId": 26,
+  "aggregateId": 1,
+  "links": {
+    "next": "https://bdl.stat.gov.pl/api/v1/data/by-variable/60641?format=json&page=1&page-size=100"
+  },
+  "results": [
+    {
+      "id": "000000000000",
+      "name": "POLAND",
+      "values": [{ "year": "2018", "val": 38411148, "attrId": 1 }]
+    },
+    {
+      "id": "011200000000",
+      "name": "MAŁOPOLSKIE",
+      "values": [{ "year": "2018", "val": 3400577, "attrId": 1 }]
+    }
+  ]
+}

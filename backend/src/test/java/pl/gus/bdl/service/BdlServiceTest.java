@@ -1,6 +1,5 @@
 package pl.gus.bdl.service;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -31,13 +30,9 @@ class BdlServiceTest {
     @InjectMocks
     private BdlService bdlService;
 
-    @BeforeEach
-    void setUp() {
-        when(properties.getDefaultPageSize()).thenReturn(20);
-    }
-
     @Test
     void getSubjectsUsesDefaultPageWhenNull() {
+        when(properties.getDefaultPageSize()).thenReturn(20);
         PageResponse<SubjectDto> response = new PageResponse<>();
         when(bdlApiClient.getSubjects(null, 0, 20)).thenReturn(response);
 
@@ -49,6 +44,7 @@ class BdlServiceTest {
 
     @Test
     void getSubjectsPassesParentIdAndPage() {
+        when(properties.getDefaultPageSize()).thenReturn(20);
         PageResponse<SubjectDto> response = new PageResponse<>();
         when(bdlApiClient.getSubjects("K3", 2, 20)).thenReturn(response);
 

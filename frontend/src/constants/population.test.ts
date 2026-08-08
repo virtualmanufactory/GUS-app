@@ -3,6 +3,8 @@ import {
   findVoivodeshipByGeoName,
   formatPopulation,
   normalizeName,
+  POLAND_BDL_ID,
+  POPULATION_UNIT_IDS,
   VOIVODESHIPS,
 } from '../constants/population';
 
@@ -55,5 +57,12 @@ describe('VOIVODESHIPS', () => {
   it('has unique BDL ids', () => {
     const ids = VOIVODESHIPS.map((v) => v.bdlId);
     expect(new Set(ids).size).toBe(16);
+  });
+});
+
+describe('POPULATION_UNIT_IDS', () => {
+  it('includes Poland and all voivodeships', () => {
+    expect(POPULATION_UNIT_IDS).toHaveLength(17);
+    expect(POPULATION_UNIT_IDS[0]).toBe(POLAND_BDL_ID);
   });
 });

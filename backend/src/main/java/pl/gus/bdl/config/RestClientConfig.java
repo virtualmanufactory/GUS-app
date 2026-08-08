@@ -9,7 +9,7 @@ import org.springframework.web.client.RestClient;
 public class RestClientConfig {
 
     @Bean
-    public RestClient bdlRestClient(BdlApiProperties properties) {
+    public RestClient.Builder bdlRestClientBuilder(BdlApiProperties properties) {
         SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
         factory.setConnectTimeout(10_000);
         factory.setReadTimeout(30_000);
@@ -22,6 +22,6 @@ public class RestClientConfig {
             builder.defaultHeader("X-ClientId", properties.getClientId());
         }
 
-        return builder.build();
+        return builder;
     }
 }
