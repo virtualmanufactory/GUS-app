@@ -1,7 +1,6 @@
 # GusCompanyFinder
 
 <img width="1888" height="899" alt="image" src="https://github.com/user-attachments/assets/360013f5-8a49-49fd-9f26-b434e55d78fa" />
-<img width="1890" height="910" alt="image" src="https://github.com/user-attachments/assets/d7b1422c-a81f-47e9-b510-fa7b43aea757" />
 <img width="1894" height="897" alt="image" src="https://github.com/user-attachments/assets/1b123007-a49b-4ba4-9efc-9cfd65af2888" />
 
 ## Licencja danych
