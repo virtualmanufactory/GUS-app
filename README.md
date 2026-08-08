@@ -44,6 +44,28 @@ npm run dev
 
 Aplikacja dostępna pod adresem: http://localhost:5173
 
+# Testy
+
+## Backend (JUnit 5 + MockMvc)
+
+```bash
+cd backend
+mvn test
+```
+
+- **Jednostkowe:** `BdlServiceTest`, `SubjectControllerTest`
+- **Integracyjne:** `BdlApiIntegrationTest` (MockRestServiceServer + pełny kontekst Spring)
+
+## Frontend (Vitest + Testing Library)
+
+```bash
+cd frontend
+npm test
+```
+
+- **Jednostkowe:** `bdlApi.test.ts`, `population.test.ts`, `AppLogo.test.tsx`, `YearFilter.test.tsx`
+- **Integracyjne:** `HomePage.integration.test.tsx`
+
 Dashboard populacji (mapa + wykresy): http://localhost:5173/population
 
 ## Struktura projektu

@@ -1,0 +1,22 @@
+{
+  "totalRecords": 1,
+  "variableId": 60641,
+  "measureUnitId": 26,
+  "aggregateId": 1,
+  "results": [
+    {
+      "id": "000000000000",
+      "name": "POLAND",
+      "values": [
+        { "year": "2018", "val": 38411148, "attrId": 1 }
+      ]
+    },
+    {
+      "id": "071400000000",
+      "name": "MAZOWIECKIE",
+      "values": [
+        { "year": "2018", "val": 5425000, "attrId": 1 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "K3",
+  "parentId": null,
+  "name": "POPULATION",
+  "hasVariables": false,
+  "children": ["G7"],
+  "levels": [3, 4, 5, 6, 7]
+}
