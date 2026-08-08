@@ -32,16 +32,34 @@ export interface Unit {
   children?: string[];
 }
 
+export interface DataValue {
+  year: string;
+  val: number | null;
+  attrId: number;
+}
+
+export interface DataResult {
+  id: string;
+  name: string;
+  values: DataValue[];
+}
+
 export interface DataByVariable {
-  id: number;
-  measureUnitId?: string;
-  measureUnitName?: string;
-  years?: number[];
-  values: Record<string, [number | null, number, number][]>;
+  totalRecords: number;
+  variableId: number;
+  measureUnitId: number;
+  results: DataResult[];
 }
 
 export interface DictionaryItem {
   id: number | string;
   name: string;
   description?: string;
+}
+
+export interface PopulationMetric {
+  id: string;
+  label: string;
+  variableId: number;
+  group?: 'basic' | 'age' | 'economic';
 }

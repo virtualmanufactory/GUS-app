@@ -14,6 +14,9 @@ export default function Layout() {
           <Link to="/" className={location.pathname === '/' ? 'active' : ''}>
             Start
           </Link>
+          <Link to="/population" className={isActive('/population') ? 'active' : ''}>
+            Populacja
+          </Link>
           <Link to="/subjects" className={isActive('/subjects') ? 'active' : ''}>
             Tematy
           </Link>

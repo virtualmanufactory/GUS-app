@@ -2,16 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ac81aad-cb97-4877-b26f-42bb2ecb99b2" name="Changes" comment="create basic structure of project">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/application-local.properties.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/geojson/wojewodztwa.geojson" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/population/AgeGroupChart.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/population/EconomicAgeChart.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/population/GenderChart.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/population/MetricSelector.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/population/PolandMap.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/population/PopulationTrendChart.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/population/YearFilter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/constants/population.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/usePopulationData.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/PopulationDashboard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/styles/population.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.idea/GUS-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/GUS-app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application-local.yml.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/pl/gus/bdl/dto/DataByVariableResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/pl/gus/bdl/dto/DataByVariableResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/api/bdlApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/api/bdlApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/DataPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/DataPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/HomePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/types/bdl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/types/bdl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tsconfig.app.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.app.tsbuildinfo" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,13 +60,28 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/user/IdeaProjects/gus/backend",
+    "last_opened_file_path": "C:/Users/user/IdeaProjects/gus",
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.4597701",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="gus" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="gus" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

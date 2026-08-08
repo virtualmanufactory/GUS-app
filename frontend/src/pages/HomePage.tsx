@@ -9,6 +9,7 @@ export default function HomePage() {
         dla gmin, powiatów, województw i całej Polski.
       </p>
       <div className="hero-links">
+        <Link to="/population">Dashboard populacji</Link>
         <Link to="/subjects">Przeglądaj tematy</Link>
         <Link to="/variables">Szukaj zmiennych</Link>
         <Link to="/units">Jednostki terytorialne</Link>

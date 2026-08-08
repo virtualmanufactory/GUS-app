@@ -39,8 +39,7 @@ export default function DataPage() {
   if (error) return <div className="error">{error}</div>;
   if (!variable || !data) return null;
 
-  const unitIds = Object.keys(data.values);
-  const years = data.years ?? [];
+  const voivodeshipResults = data.results.filter((r) => r.id.endsWith('0000000000') && r.id.length === 12);
 
   return (
     <div>
@@ -52,45 +51,30 @@ export default function DataPage() {
 
       <div className="card">
         <h2>{variable.name}</h2>
-        <p style={{ color: '#64748b', fontSize: '0.875rem' }}>
-          ID: {variable.id}
-          {data.measureUnitName && ` · Jednostka miary: ${data.measureUnitName}`}
-        </p>
+        <p style={{ color: '#64748b', fontSize: '0.875rem' }}>ID: {variable.id}</p>
 
-        {unitIds.length > 0 ? (
+        {voivodeshipResults.length > 0 ? (
           <div style={{ overflowX: 'auto' }}>
             <table className="data-table">
               <thead>
                 <tr>
-                  <th>Jednostka (ID)</th>
-                  {years.map((year) => (
-                    <th key={year}>{year}</th>
+                  <th>Jednostka</th>
+                  {voivodeshipResults[0]?.values.map((v) => (
+                    <th key={v.year}>{v.year}</th>
                   ))}
                 </tr>
               </thead>
               <tbody>
-                {unitIds.slice(0, 50).map((unitId) => (
-                  <tr key={unitId}>
-                    <td>{unitId}</td>
-                    {years.map((year) => {
-                      const yearData = data.values[unitId]?.find(
-                        (entry) => entry[2] === year,
-                      );
-                      return (
-                        <td key={year}>
-                          {yearData ? (yearData[0] ?? '—') : '—'}
-                        </td>
-                      );
-                    })}
+                {voivodeshipResults.slice(0, 50).map((unit) => (
+                  <tr key={unit.id}>
+                    <td>{unit.name}</td>
+                    {unit.values.map((v) => (
+                      <td key={v.year}>{v.val ?? '—'}</td>
+                    ))}
                   </tr>
                 ))}
               </tbody>
             </table>
-            {unitIds.length > 50 && (
-              <p style={{ color: '#64748b', fontSize: '0.875rem', marginTop: '0.5rem' }}>
-                Wyświetlono 50 z {unitIds.length} jednostek
-              </p>
-            )}
           </div>
         ) : (
           <p style={{ color: '#64748b' }}>Brak danych dla tej zmiennej</p>

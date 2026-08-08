@@ -4,15 +4,30 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import java.util.List;
-import java.util.Map;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class DataByVariableResponse {
 
-    private int id;
-    private String measureUnitId;
-    private String measureUnitName;
-    private List<Integer> years;
-    private Map<String, List<Object>> values;
+    private long totalRecords;
+    private int variableId;
+    private int measureUnitId;
+    private Integer aggregateId;
+    private List<DataResult> results;
+
+    @Data
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    public static class DataResult {
+        private String id;
+        private String name;
+        private List<DataValue> values;
+    }
+
+    @Data
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    public static class DataValue {
+        private String year;
+        private Double val;
+        private int attrId;
+    }
 }

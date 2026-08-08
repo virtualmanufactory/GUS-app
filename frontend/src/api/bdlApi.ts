@@ -1,11 +1,4 @@
-import type {
-  DataByVariable,
-  DictionaryItem,
-  PageResponse,
-  Subject,
-  Unit,
-  Variable,
-} from '../types/bdl';
+import type { DataByVariable, PageResponse, Subject, Unit, Variable } from '../types/bdl';
 
 const API_BASE = '/api';
 
@@ -51,27 +44,37 @@ export const bdlApi = {
     return fetchJson(`${API_BASE}/units/${id}`);
   },
 
-  getDataByVariable(
-    variableId: number,
-    years?: number[],
-    unitIds?: string[],
-  ): Promise<DataByVariable> {
+  getDataByVariable(variableId: number, years?: number[]): Promise<DataByVariable> {
     const params = new URLSearchParams();
     years?.forEach((y) => params.append('year', String(y)));
-    unitIds?.forEach((id) => params.append('unitId', id));
     const query = params.toString();
     return fetchJson(`${API_BASE}/data/by-variable/${variableId}${query ? `?${query}` : ''}`);
   },
 
-  getAggregates(): Promise<DictionaryItem[]> {
-    return fetchJson(`${API_BASE}/dictionaries/aggregates`);
-  },
-
-  getYears(): Promise<DictionaryItem[]> {
+  getYears(): Promise<{ id: number; name: string }[]> {
     return fetchJson(`${API_BASE}/dictionaries/years`);
   },
-
-  getLevels(): Promise<DictionaryItem[]> {
-    return fetchJson(`${API_BASE}/dictionaries/levels`);
-  },
 };
+
+export function extractUnitValue(
+  data: DataByVariable,
+  unitId: string,
+  year: number,
+): number | null {
+  const unit = data.results.find((r) => r.id === unitId);
+  if (!unit) return null;
+  const entry = unit.values.find((v) => Number(v.year) === year);
+  return entry?.val ?? null;
+}
+
+export function extractUnitSeries(
+  data: DataByVariable,
+  unitId: string,
+  years: number[],
+): Record<number, number | null> {
+  const result: Record<number, number | null> = {};
+  years.forEach((year) => {
+    result[year] = extractUnitValue(data, unitId, year);
+  });
+  return result;
+}

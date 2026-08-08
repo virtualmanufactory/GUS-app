@@ -44,6 +44,8 @@ npm run dev
 
 Aplikacja dostępna pod adresem: http://localhost:5173
 
+Dashboard populacji (mapa + wykresy): http://localhost:5173/population
+
 ## Struktura projektu
 
 ```
