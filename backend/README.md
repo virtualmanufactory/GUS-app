@@ -1,4 +1,4 @@
-# Backend – Spring Boot proxy do API BDL GUS
+# Backend GusCompanyFinder – Spring Boot proxy do API BDL GUS
 
 ## Uruchomienie
 

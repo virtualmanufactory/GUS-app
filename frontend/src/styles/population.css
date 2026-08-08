@@ -13,6 +13,14 @@
   border-bottom: 1px solid #dde1e7;
 }
 
+.dashboard-header .dashboard-logo {
+  flex-shrink: 0;
+}
+
+.dashboard-header .app-logo-name {
+  color: #1e293b;
+}
+
 .dashboard-header h1 {
   flex: 1;
   margin: 0;

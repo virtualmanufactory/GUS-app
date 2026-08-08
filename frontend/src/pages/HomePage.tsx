@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
+import AppLogo from '../components/AppLogo';
 
 export default function HomePage() {
   return (
     <div className="hero">
-      <h2>Bank Danych Lokalnych GUS</h2>
+      <AppLogo to="/" size={72} className="hero-logo" />
+      <h2>GusCompanyFinder</h2>
       <p>
-        Przeglądaj dane statystyczne o gospodarce, społeczeństwie i środowisku
+        Przeglądaj dane statystyczne GUS o gospodarce, społeczeństwie i środowisku
         dla gmin, powiatów, województw i całej Polski.
       </p>
       <div className="hero-links">

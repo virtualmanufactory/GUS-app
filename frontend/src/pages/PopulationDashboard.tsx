@@ -1,3 +1,4 @@
+import AppLogo from '../components/AppLogo';
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { extractUnitValue } from '../api/bdlApi';
@@ -72,6 +73,7 @@ export default function PopulationDashboard() {
         <Link to="/" className="btn-back" aria-label="Wróć">
           ←
         </Link>
+        <AppLogo to="/" size={32} showName={false} className="dashboard-logo" />
         <h1>Populacja w Polsce na przestrzeni lat</h1>
         <MetricSelector
           selectedMetricId={selectedMetricId}

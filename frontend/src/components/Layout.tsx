@@ -1,4 +1,5 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
+import AppLogo from './AppLogo';
 
 export default function Layout() {
   const location = useLocation();
@@ -9,7 +10,7 @@ export default function Layout() {
   return (
     <div className="app">
       <header className="header">
-        <h1>GUS BDL</h1>
+        <AppLogo />
         <nav>
           <Link to="/" className={location.pathname === '/' ? 'active' : ''}>
             Start
@@ -32,7 +33,7 @@ export default function Layout() {
         <Outlet />
       </main>
       <footer className="footer">
-        Dane: Bank Danych Lokalnych GUS &middot;{' '}
+        GusCompanyFinder &middot; Dane: Bank Danych Lokalnych GUS &middot;{' '}
         <a href="https://api.stat.gov.pl/Home/BdlApi" target="_blank" rel="noreferrer">
           API BDL
         </a>

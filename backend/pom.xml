@@ -14,8 +14,8 @@
     <groupId>pl.gus</groupId>
     <artifactId>bdl-app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>GUS BDL App</name>
-    <description>Aplikacja do przeglądania danych Banku Danych Lokalnych GUS</description>
+    <name>GusCompanyFinder</name>
+    <description>Aplikacja GusCompanyFinder – dane Banku Danych Lokalnych GUS</description>
 
     <properties>
         <java.version>17</java.version>

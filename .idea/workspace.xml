@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ac81aad-cb97-4877-b26f-42bb2ecb99b2" name="Changes" comment="create basic structure of project">
-      <change afterPath="$PROJECT_DIR$/frontend/public/geojson/wojewodztwa.geojson" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/population/AgeGroupChart.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/population/EconomicAgeChart.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/population/GenderChart.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/population/MetricSelector.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/population/PolandMap.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/population/PopulationTrendChart.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/population/YearFilter.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/constants/population.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/usePopulationData.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/PopulationDashboard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/styles/population.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/pl/gus/bdl/dto/DataByVariableResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/pl/gus/bdl/dto/DataByVariableResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/api/bdlApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/api/bdlApi.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/DataPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/DataPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/HomePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/types/bdl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/types/bdl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tsconfig.app.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.app.tsbuildinfo" afterDir="false" />
-    </list>
+    <list default="true" id="2ac81aad-cb97-4877-b26f-42bb2ecb99b2" name="Changes" comment="create basic structure of project" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

@@ -1,4 +1,4 @@
-# GUS BDL App
+# GusCompanyFinder
 
 Aplikacja do przeglądania danych **Banku Danych Lokalnych GUS** (BDL).
 
