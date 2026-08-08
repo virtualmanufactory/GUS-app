@@ -1,0 +1,124 @@
+{
+  "common": {
+    "appName": "GusCompanyFinder",
+    "loading": "Ładowanie...",
+    "loadingData": "Ładowanie danych...",
+    "unknownError": "Nieznany błąd",
+    "fetchError": "Błąd pobierania danych",
+    "noResults": "Brak wyników",
+    "noData": "Brak danych",
+    "back": "Wróć",
+    "previous": "Poprzednia",
+    "next": "Następna",
+    "page": "Strona {{current}} z {{total}}",
+    "variables": "zmienne",
+    "subtopics": "{{count}} podtematów",
+    "level": "poziom {{level}}",
+    "unit": "Jednostka",
+    "poland": "Polska",
+    "region": "Region",
+    "dataSource": "Dane: Bank Danych Lokalnych GUS",
+    "apiBdl": "API BDL"
+  },
+  "nav": {
+    "home": "Start",
+    "population": "Populacja",
+    "subjects": "Tematy",
+    "variables": "Zmienne",
+    "units": "Jednostki"
+  },
+  "home": {
+    "title": "GusCompanyFinder",
+    "description": "Przeglądaj dane statystyczne GUS o gospodarce, społeczeństwie i środowisku dla gmin, powiatów, województw i całej Polski.",
+    "populationDashboard": "Dashboard populacji",
+    "browseSubjects": "Przeglądaj tematy",
+    "searchVariables": "Szukaj zmiennych",
+    "territorialUnits": "Jednostki terytorialne"
+  },
+  "subjects": {
+    "title": "Tematy główne",
+    "subtopics": "Podtematy: {{name}}",
+    "breadcrumb": "Tematy"
+  },
+  "variables": {
+    "title": "Zmienne statystyczne",
+    "searchPlaceholder": "Szukaj zmiennej po nazwie...",
+    "breadcrumb": "Zmienne"
+  },
+  "units": {
+    "title": "Jednostki terytorialne",
+    "subunits": "Podjednostki: {{name}}",
+    "searchPlaceholder": "Szukaj jednostki po nazwie...",
+    "breadcrumb": "Jednostki"
+  },
+  "data": {
+    "noDataForVariable": "Brak danych dla tej zmiennej"
+  },
+  "population": {
+    "title": "Populacja w Polsce na przestrzeni lat",
+    "loading": "Ładowanie danych populacji...",
+    "loadError": "Nie udało się pobrać danych",
+    "backendHint": "Upewnij się, że backend Spring Boot działa na porcie 8080.",
+    "kpiLabel": "Populacja",
+    "mapMetricLabel": "Wskaźnik na mapie",
+    "years": "Lata",
+    "voivodeships": "Województwa",
+    "allPoland": "Cała Polska",
+    "noMapData": "brak danych",
+    "trendTitle": "Populacja na przestrzeni lat",
+    "loadingChart": "Ładowanie wykresu...",
+    "noDataForYears": "Brak danych dla wybranych lat",
+    "genderTitle": "Podział na płeć",
+    "noGenderData": "Brak danych o płci",
+    "females": "Kobiety",
+    "males": "Mężczyźni",
+    "age0to4Title": "Osoby w wieku 0–4",
+    "noAgeData": "Brak danych dla wieku 0–4",
+    "economicTitle": "Wykres społeczeństwa podzielonego na ekonomiczne grupy wiekowe",
+    "noEconomicData": "Brak danych o grupach wiekowych",
+    "preWorking": "Wiek przedprodukcyjny",
+    "working": "Wiek produkcyjny",
+    "postWorking": "Wiek poprodukcyjny",
+    "metricGroups": {
+      "basic": "Podstawowe",
+      "age": "Wiek",
+      "economic": "Grupy wiekowe ekonomiczne"
+    },
+    "metrics": {
+      "total": "Populacja ogółem",
+      "males": "Mężczyźni",
+      "females": "Kobiety",
+      "age0": "Wiek 0 lat",
+      "age1": "Wiek 1 rok",
+      "age2": "Wiek 2 lata",
+      "age3": "Wiek 3 lata",
+      "age4": "Wiek 4 lata",
+      "preWorking": "Wiek przedprodukcyjny",
+      "working": "Wiek produkcyjny",
+      "postWorking": "Wiek poprodukcyjny"
+    }
+  },
+  "voivodeships": {
+    "dolnoslaskie": "DOLNOŚLĄSKIE",
+    "kujawskoPomorskie": "KUJAWSKO-POMORSKIE",
+    "lubelskie": "LUBELSKIE",
+    "lubuskie": "LUBUSKIE",
+    "lodzkie": "ŁÓDZKIE",
+    "mazowieckie": "MAZOWIECKIE",
+    "malopolskie": "MAŁOPOLSKIE",
+    "opolskie": "OPOLSKIE",
+    "podkarpackie": "PODKARPACKIE",
+    "podlaskie": "PODLASKIE",
+    "pomorskie": "POMORSKIE",
+    "slaskie": "ŚLĄSKIE",
+    "swietokrzyskie": "ŚWIĘTOKRZYSKIE",
+    "warminskoMazurskie": "WARMIŃSKO-MAZURSKIE",
+    "wielkopolskie": "WIELKOPOLSKIE",
+    "zachodniopomorskie": "ZACHODNIOPOMORSKIE"
+  },
+  "language": {
+    "label": "Język",
+    "pl": "Polski",
+    "en": "English"
+  }
+}

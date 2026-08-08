@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { POPULATION_YEARS } from '../../constants/population';
 
 interface Props {
@@ -6,6 +7,8 @@ interface Props {
 }
 
 export default function YearFilter({ selectedYears, onChange }: Props) {
+  const { t } = useTranslation();
+
   const toggleYear = (year: number) => {
     if (selectedYears.includes(year)) {
       onChange(selectedYears.filter((y) => y !== year));
@@ -16,7 +19,7 @@ export default function YearFilter({ selectedYears, onChange }: Props) {
 
   return (
     <aside className="year-filter">
-      <h3>Lata</h3>
+      <h3>{t('population.years')}</h3>
       <div className="year-filter-list">
         {POPULATION_YEARS.map((year) => (
           <label key={year} className="year-filter-item">

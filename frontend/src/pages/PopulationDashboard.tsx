@@ -1,6 +1,8 @@
 import AppLogo from '../components/AppLogo';
+import LanguageSwitcher from '../components/LanguageSwitcher';
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { extractUnitValue } from '../api/bdlApi';
 import AgeGroupChart from '../components/population/AgeGroupChart';
 import EconomicAgeChart from '../components/population/EconomicAgeChart';
@@ -19,6 +21,7 @@ import { usePopulationData } from '../hooks/usePopulationData';
 import '../styles/population.css';
 
 export default function PopulationDashboard() {
+  const { t, i18n } = useTranslation();
   const { data, loading, error } = usePopulationData();
   const [selectedYears, setSelectedYears] = useState<number[]>([...POPULATION_YEARS]);
   const [selectedMetricId, setSelectedMetricId] = useState('total');
@@ -39,14 +42,16 @@ export default function PopulationDashboard() {
   }, [totalData, activeUnitId, displayYear]);
 
   const regionLabel = useMemo(() => {
-    if (!selectedVoivodeshipId) return 'Polska';
-    return VOIVODESHIPS.find((v) => v.bdlId === selectedVoivodeshipId)?.name ?? 'Region';
-  }, [selectedVoivodeshipId]);
+    if (!selectedVoivodeshipId) return t('common.poland');
+    const voivodeship = VOIVODESHIPS.find((v) => v.bdlId === selectedVoivodeshipId);
+    if (!voivodeship) return t('common.region');
+    return t(`voivodeships.${voivodeship.nameKey}`, { defaultValue: voivodeship.name });
+  }, [selectedVoivodeshipId, t]);
 
   if (loading) {
     return (
       <div className="population-dashboard">
-        <div className="dashboard-loading">Ładowanie danych populacji...</div>
+        <div className="dashboard-loading">{t('population.loading')}</div>
       </div>
     );
   }
@@ -56,11 +61,9 @@ export default function PopulationDashboard() {
       <div className="population-dashboard">
         <div className="dashboard-error">
           <p>{error}</p>
-          <p className="dashboard-error-hint">
-            Upewnij się, że backend Spring Boot działa na porcie 8080.
-          </p>
+          <p className="dashboard-error-hint">{t('population.backendHint')}</p>
           <Link to="/" className="btn-back">
-            Wróć
+            {t('common.back')}
           </Link>
         </div>
       </div>
@@ -70,15 +73,13 @@ export default function PopulationDashboard() {
   return (
     <div className="population-dashboard">
       <header className="dashboard-header">
-        <Link to="/" className="btn-back" aria-label="Wróć">
+        <Link to="/" className="btn-back" aria-label={t('common.back')}>
           ←
         </Link>
         <AppLogo to="/" size={32} showName={false} className="dashboard-logo" />
-        <h1>Populacja w Polsce na przestrzeni lat</h1>
-        <MetricSelector
-          selectedMetricId={selectedMetricId}
-          onChange={setSelectedMetricId}
-        />
+        <h1>{t('population.title')}</h1>
+        <MetricSelector selectedMetricId={selectedMetricId} onChange={setSelectedMetricId} />
+        <LanguageSwitcher />
       </header>
 
       <div className="dashboard-body">
@@ -95,8 +96,10 @@ export default function PopulationDashboard() {
 
             <div className="dashboard-side">
               <div className="kpi-card">
-                <span className="kpi-label">Populacja</span>
-                <span className="kpi-value">{formatPopulation(kpiValue)}</span>
+                <span className="kpi-label">{t('population.kpiLabel')}</span>
+                <span className="kpi-value">
+                  {formatPopulation(kpiValue, i18n.language)}
+                </span>
                 <span className="kpi-region">
                   {regionLabel} · {displayYear}
                 </span>

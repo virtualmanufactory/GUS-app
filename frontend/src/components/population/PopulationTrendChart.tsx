@@ -8,6 +8,7 @@ import {
   ResponsiveContainer,
   Brush,
 } from 'recharts';
+import { useTranslation } from 'react-i18next';
 import { extractUnitSeries } from '../../api/bdlApi';
 import { formatPopulation } from '../../constants/population';
 import type { DataByVariable } from '../../types/bdl';
@@ -19,13 +20,11 @@ interface Props {
   title?: string;
 }
 
-export default function PopulationTrendChart({
-  data,
-  unitId,
-  years,
-  title = 'Populacja na przestrzeni lat',
-}: Props) {
-  if (!data) return <div className="chart-empty">Ładowanie wykresu...</div>;
+export default function PopulationTrendChart({ data, unitId, years, title }: Props) {
+  const { t, i18n } = useTranslation();
+  const chartTitle = title ?? t('population.trendTitle');
+
+  if (!data) return <div className="chart-empty">{t('population.loadingChart')}</div>;
 
   const series = extractUnitSeries(data, unitId, years);
   const chartData = years
@@ -36,12 +35,12 @@ export default function PopulationTrendChart({
     }));
 
   if (chartData.length === 0) {
-    return <div className="chart-empty">Brak danych dla wybranych lat</div>;
+    return <div className="chart-empty">{t('population.noDataForYears')}</div>;
   }
 
   return (
     <div className="chart-card">
-      <h3>{title}</h3>
+      <h3>{chartTitle}</h3>
       <ResponsiveContainer width="100%" height={260}>
         <LineChart data={chartData}>
           <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
@@ -50,7 +49,7 @@ export default function PopulationTrendChart({
             tick={{ fontSize: 12 }}
             tickFormatter={(v) => `${(v / 1_000_000).toFixed(1)} mln`}
           />
-          <Tooltip formatter={(value: number) => formatPopulation(value)} />
+          <Tooltip formatter={(value: number) => formatPopulation(value, i18n.language)} />
           <Line
             type="monotone"
             dataKey="value"

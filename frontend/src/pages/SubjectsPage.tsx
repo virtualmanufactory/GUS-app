@@ -1,9 +1,11 @@
 import { useCallback, useEffect, useState } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { bdlApi } from '../api/bdlApi';
 import type { Subject } from '../types/bdl';
 
 export default function SubjectsPage() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const parentId = searchParams.get('parentId') ?? undefined;
@@ -30,11 +32,11 @@ export default function SubjectsPage() {
         setParentName(null);
       }
     } catch (e) {
-      setError(e instanceof Error ? e.message : 'Nieznany błąd');
+      setError(e instanceof Error ? e.message : t('common.unknownError'));
     } finally {
       setLoading(false);
     }
-  }, [parentId, page]);
+  }, [parentId, page, t]);
 
   useEffect(() => {
     loadSubjects();
@@ -53,17 +55,19 @@ export default function SubjectsPage() {
     <div>
       {parentName && (
         <div className="breadcrumb">
-          <Link to="/subjects">Tematy</Link>
+          <Link to="/subjects">{t('subjects.breadcrumb')}</Link>
           <span>/</span>
           <span>{parentName}</span>
         </div>
       )}
 
       <div className="card">
-        <h2>{parentName ? `Podtematy: ${parentName}` : 'Tematy główne'}</h2>
+        <h2>
+          {parentName ? t('subjects.subtopics', { name: parentName }) : t('subjects.title')}
+        </h2>
 
         {error && <div className="error">{error}</div>}
-        {loading && <div className="loading">Ładowanie...</div>}
+        {loading && <div className="loading">{t('common.loading')}</div>}
 
         {!loading && !error && (
           <>
@@ -82,9 +86,11 @@ export default function SubjectsPage() {
                 >
                   <span>{subject.name}</span>
                   {subject.hasVariables ? (
-                    <span className="badge">zmienne</span>
+                    <span className="badge">{t('common.variables')}</span>
                   ) : subject.children?.length ? (
-                    <span className="badge">{subject.children.length} podtematów</span>
+                    <span className="badge">
+                      {t('common.subtopics', { count: subject.children.length })}
+                    </span>
                   ) : null}
                 </li>
               ))}
@@ -97,17 +103,15 @@ export default function SubjectsPage() {
                   disabled={page === 0}
                   onClick={() => navigateTo(parentId, page - 1)}
                 >
-                  Poprzednia
+                  {t('common.previous')}
                 </button>
-                <span>
-                  Strona {page + 1} z {totalPages}
-                </span>
+                <span>{t('common.page', { current: page + 1, total: totalPages })}</span>
                 <button
                   className="btn"
                   disabled={page >= totalPages - 1}
                   onClick={() => navigateTo(parentId, page + 1)}
                 >
-                  Następna
+                  {t('common.next')}
                 </button>
               </div>
             )}

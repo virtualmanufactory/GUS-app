@@ -34,8 +34,12 @@ describe('formatPopulation', () => {
     expect(formatPopulation(5_130_000)).toBe('5,13 mln');
   });
 
-  it('formats thousands', () => {
-    expect(formatPopulation(250_000)).toBe('250 tys.');
+  it('formats thousands in English', () => {
+    expect(formatPopulation(250_000, 'en')).toBe('250 k');
+  });
+
+  it('formats thousands in Polish', () => {
+    expect(formatPopulation(250_000, 'pl')).toBe('250 tys.');
   });
 
   it('returns dash for null', () => {

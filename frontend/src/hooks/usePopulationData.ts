@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { bdlApi } from '../api/bdlApi';
 import {
   AGE_0_4_VARIABLES,
@@ -13,6 +14,7 @@ export interface PopulationDataCache {
 }
 
 export function usePopulationData() {
+  const { t } = useTranslation();
   const [data, setData] = useState<PopulationDataCache | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -45,11 +47,11 @@ export function usePopulationData() {
 
       setData({ metrics, age0to4 });
     } catch (e) {
-      setError(e instanceof Error ? e.message : 'Nie udało się pobrać danych');
+      setError(e instanceof Error ? e.message : t('population.loadError'));
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [t]);
 
   useEffect(() => {
     load();

@@ -1,9 +1,11 @@
 import { useCallback, useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { bdlApi } from '../api/bdlApi';
 import type { Variable } from '../types/bdl';
 
 export default function VariablesPage() {
+  const { t } = useTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
   const subjectId = searchParams.get('subjectId') ?? undefined;
   const page = Number(searchParams.get('page') ?? '0');
@@ -22,11 +24,11 @@ export default function VariablesPage() {
       setVariables(response.results);
       setTotalRecords(response.totalRecords);
     } catch (e) {
-      setError(e instanceof Error ? e.message : 'Nieznany błąd');
+      setError(e instanceof Error ? e.message : t('common.unknownError'));
     } finally {
       setLoading(false);
     }
-  }, [subjectId, search, page]);
+  }, [subjectId, search, page, t]);
 
   useEffect(() => {
     loadVariables();
@@ -45,20 +47,20 @@ export default function VariablesPage() {
   return (
     <div>
       <div className="card">
-        <h2>Zmienne statystyczne</h2>
+        <h2>{t('variables.title')}</h2>
 
         <form onSubmit={handleSearch}>
           <input
             className="search-input"
             type="text"
-            placeholder="Szukaj zmiennej po nazwie..."
+            placeholder={t('variables.searchPlaceholder')}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
         </form>
 
         {error && <div className="error">{error}</div>}
-        {loading && <div className="loading">Ładowanie...</div>}
+        {loading && <div className="loading">{t('common.loading')}</div>}
 
         {!loading && !error && (
           <>
@@ -78,7 +80,7 @@ export default function VariablesPage() {
             </ul>
 
             {variables.length === 0 && (
-              <p style={{ textAlign: 'center', color: '#64748b' }}>Brak wyników</p>
+              <p style={{ textAlign: 'center', color: '#64748b' }}>{t('common.noResults')}</p>
             )}
 
             {totalPages > 1 && (
@@ -92,11 +94,9 @@ export default function VariablesPage() {
                     setSearchParams(params);
                   }}
                 >
-                  Poprzednia
+                  {t('common.previous')}
                 </button>
-                <span>
-                  Strona {page + 1} z {totalPages}
-                </span>
+                <span>{t('common.page', { current: page + 1, total: totalPages })}</span>
                 <button
                   className="btn"
                   disabled={page >= totalPages - 1}
@@ -106,7 +106,7 @@ export default function VariablesPage() {
                     setSearchParams(params);
                   }}
                 >
-                  Następna
+                  {t('common.next')}
                 </button>
               </div>
             )}

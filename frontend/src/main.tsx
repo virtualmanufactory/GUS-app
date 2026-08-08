@@ -8,6 +8,7 @@ import PopulationDashboard from './pages/PopulationDashboard';
 import SubjectsPage from './pages/SubjectsPage';
 import UnitsPage from './pages/UnitsPage';
 import VariablesPage from './pages/VariablesPage';
+import './i18n';
 import './styles/index.css';
 
 createRoot(document.getElementById('root')!).render(

@@ -66,6 +66,10 @@ npm test
 - **Jednostkowe:** `bdlApi.test.ts`, `population.test.ts`, `AppLogo.test.tsx`, `YearFilter.test.tsx`
 - **Integracyjne:** `HomePage.integration.test.tsx`
 
+W aplikacji dostępne są dwa języki interfejsu: **polski** i **angielski**. Przełącznik znajduje się w nagłówku (oraz na dashboardzie populacji). Wybór jest zapisywany w `localStorage`.
+
+Pliki tłumaczeń: `frontend/src/i18n/locales/pl.json`, `frontend/src/i18n/locales/en.json`
+
 Dashboard populacji (mapa + wykresy): http://localhost:5173/population
 
 ## Struktura projektu

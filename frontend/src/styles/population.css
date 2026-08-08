@@ -21,6 +21,16 @@
   color: #1e293b;
 }
 
+.dashboard-header .language-switcher label {
+  color: #64748b;
+}
+
+.dashboard-header .language-switcher select {
+  border-color: #cbd5e1;
+  background: #fff;
+  color: #1e293b;
+}
+
 .dashboard-header h1 {
   flex: 1;
   margin: 0;

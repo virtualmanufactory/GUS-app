@@ -8,6 +8,7 @@ import {
   ResponsiveContainer,
   Legend,
 } from 'recharts';
+import { useTranslation } from 'react-i18next';
 import { extractUnitValue } from '../../api/bdlApi';
 import { formatPopulation } from '../../constants/population';
 import type { DataByVariable } from '../../types/bdl';
@@ -33,20 +34,24 @@ export default function EconomicAgeChart({
   unitId,
   years,
 }: Props) {
-  const chartData = years.map((year) => ({
-    year: String(year),
-    pre: preWorking ? extractUnitValue(preWorking, unitId, year) ?? 0 : 0,
-    working: working ? extractUnitValue(working, unitId, year) ?? 0 : 0,
-    post: postWorking ? extractUnitValue(postWorking, unitId, year) ?? 0 : 0,
-  })).filter((item) => item.pre + item.working + item.post > 0);
+  const { t, i18n } = useTranslation();
+
+  const chartData = years
+    .map((year) => ({
+      year: String(year),
+      pre: preWorking ? extractUnitValue(preWorking, unitId, year) ?? 0 : 0,
+      working: working ? extractUnitValue(working, unitId, year) ?? 0 : 0,
+      post: postWorking ? extractUnitValue(postWorking, unitId, year) ?? 0 : 0,
+    }))
+    .filter((item) => item.pre + item.working + item.post > 0);
 
   if (chartData.length === 0) {
-    return <div className="chart-empty">Brak danych o grupach wiekowych</div>;
+    return <div className="chart-empty">{t('population.noEconomicData')}</div>;
   }
 
   return (
     <div className="chart-card chart-card-wide">
-      <h3>Wykres społeczeństwa podzielonego na ekonomiczne grupy wiekowe</h3>
+      <h3>{t('population.economicTitle')}</h3>
       <ResponsiveContainer width="100%" height={280}>
         <BarChart data={chartData} layout="vertical" margin={{ left: 20 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
@@ -55,11 +60,16 @@ export default function EconomicAgeChart({
             tickFormatter={(v) => `${(v / 1_000_000).toFixed(0)} mln`}
           />
           <YAxis type="category" dataKey="year" width={50} tick={{ fontSize: 12 }} />
-          <Tooltip formatter={(value: number) => formatPopulation(value)} />
+          <Tooltip formatter={(value: number) => formatPopulation(value, i18n.language)} />
           <Legend />
-          <Bar dataKey="pre" name="Wiek przedprodukcyjny" stackId="a" fill={COLORS.pre} />
-          <Bar dataKey="working" name="Wiek produkcyjny" stackId="a" fill={COLORS.working} />
-          <Bar dataKey="post" name="Wiek poprodukcyjny" stackId="a" fill={COLORS.post} />
+          <Bar dataKey="pre" name={t('population.preWorking')} stackId="a" fill={COLORS.pre} />
+          <Bar
+            dataKey="working"
+            name={t('population.working')}
+            stackId="a"
+            fill={COLORS.working}
+          />
+          <Bar dataKey="post" name={t('population.postWorking')} stackId="a" fill={COLORS.post} />
         </BarChart>
       </ResponsiveContainer>
     </div>

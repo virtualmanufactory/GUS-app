@@ -84,6 +84,35 @@ a:hover {
   text-decoration: none;
 }
 
+.language-switcher {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex-shrink: 0;
+}
+
+.language-switcher label {
+  font-size: 0.7rem;
+  color: #cbd5e1;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.language-switcher select {
+  padding: 0.35rem 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.language-switcher select option {
+  color: #1e293b;
+  background: #fff;
+}
+
 .main {
   flex: 1;
   padding: 2rem;

@@ -1,7 +1,10 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import AppLogo from './AppLogo';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Layout() {
+  const { t } = useTranslation();
   const location = useLocation();
 
   const isActive = (path: string) =>
@@ -13,29 +16,30 @@ export default function Layout() {
         <AppLogo />
         <nav>
           <Link to="/" className={location.pathname === '/' ? 'active' : ''}>
-            Start
+            {t('nav.home')}
           </Link>
           <Link to="/population" className={isActive('/population') ? 'active' : ''}>
-            Populacja
+            {t('nav.population')}
           </Link>
           <Link to="/subjects" className={isActive('/subjects') ? 'active' : ''}>
-            Tematy
+            {t('nav.subjects')}
           </Link>
           <Link to="/variables" className={isActive('/variables') ? 'active' : ''}>
-            Zmienne
+            {t('nav.variables')}
           </Link>
           <Link to="/units" className={isActive('/units') ? 'active' : ''}>
-            Jednostki
+            {t('nav.units')}
           </Link>
         </nav>
+        <LanguageSwitcher />
       </header>
       <main className="main">
         <Outlet />
       </main>
       <footer className="footer">
-        GusCompanyFinder &middot; Dane: Bank Danych Lokalnych GUS &middot;{' '}
+        {t('common.appName')} &middot; {t('common.dataSource')} &middot;{' '}
         <a href="https://api.stat.gov.pl/Home/BdlApi" target="_blank" rel="noreferrer">
-          API BDL
+          {t('common.apiBdl')}
         </a>
       </footer>
     </div>

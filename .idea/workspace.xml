@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ac81aad-cb97-4877-b26f-42bb2ecb99b2" name="Changes" comment="create basic structure of project" />
+    <list default="true" id="2ac81aad-cb97-4877-b26f-42bb2ecb99b2" name="Changes" comment="add test units and integrations">
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/LanguageSwitcher.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/useVoivodeshipLabel.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/i18n/i18n.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/i18n/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/i18n/locales/en.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/i18n/locales/pl.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/population/AgeGroupChart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/population/AgeGroupChart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/population/EconomicAgeChart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/population/EconomicAgeChart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/population/GenderChart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/population/GenderChart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/population/MetricSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/population/MetricSelector.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/population/PolandMap.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/population/PolandMap.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/population/PopulationTrendChart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/population/PopulationTrendChart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/population/YearFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/population/YearFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/constants/population.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/constants/population.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/constants/population.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/constants/population.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/hooks/usePopulationData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/hooks/usePopulationData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/DataPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/DataPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/HomePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/PopulationDashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/PopulationDashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/SubjectsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/SubjectsPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/UnitsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/UnitsPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/VariablesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/VariablesPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/styles/population.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/population.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/test/setup.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/test/setup.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tsconfig.app.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.app.tsbuildinfo" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1785853817081</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add test units and integrations">
+      <created>1786185007951</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1786185007951</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -127,6 +166,7 @@
     </ignored-roots>
     <MESSAGE value="init" />
     <MESSAGE value="create basic structure of project" />
-    <option name="LAST_COMMIT_MESSAGE" value="create basic structure of project" />
+    <MESSAGE value="add test units and integrations" />
+    <option name="LAST_COMMIT_MESSAGE" value="add test units and integrations" />
   </component>
 </project>

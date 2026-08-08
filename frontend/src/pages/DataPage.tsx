@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { bdlApi } from '../api/bdlApi';
 import type { DataByVariable, Variable } from '../types/bdl';
 
 export default function DataPage() {
+  const { t } = useTranslation();
   const { variableId } = useParams<{ variableId: string }>();
   const id = Number(variableId);
 
@@ -26,25 +28,27 @@ export default function DataPage() {
         setVariable(varInfo);
         setData(varData);
       } catch (e) {
-        setError(e instanceof Error ? e.message : 'Nieznany błąd');
+        setError(e instanceof Error ? e.message : t('common.unknownError'));
       } finally {
         setLoading(false);
       }
     }
 
     load();
-  }, [id]);
+  }, [id, t]);
 
-  if (loading) return <div className="loading">Ładowanie danych...</div>;
+  if (loading) return <div className="loading">{t('common.loadingData')}</div>;
   if (error) return <div className="error">{error}</div>;
   if (!variable || !data) return null;
 
-  const voivodeshipResults = data.results.filter((r) => r.id.endsWith('0000000000') && r.id.length === 12);
+  const voivodeshipResults = data.results.filter(
+    (r) => r.id.endsWith('0000000000') && r.id.length === 12,
+  );
 
   return (
     <div>
       <div className="breadcrumb">
-        <Link to="/variables">Zmienne</Link>
+        <Link to="/variables">{t('variables.breadcrumb')}</Link>
         <span>/</span>
         <span>{variable.name}</span>
       </div>
@@ -58,7 +62,7 @@ export default function DataPage() {
             <table className="data-table">
               <thead>
                 <tr>
-                  <th>Jednostka</th>
+                  <th>{t('common.unit')}</th>
                   {voivodeshipResults[0]?.values.map((v) => (
                     <th key={v.year}>{v.year}</th>
                   ))}
@@ -77,7 +81,7 @@ export default function DataPage() {
             </table>
           </div>
         ) : (
-          <p style={{ color: '#64748b' }}>Brak danych dla tej zmiennej</p>
+          <p style={{ color: '#64748b' }}>{t('data.noDataForVariable')}</p>
         )}
       </div>
     </div>

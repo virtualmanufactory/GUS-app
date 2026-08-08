@@ -1,0 +1,124 @@
+{
+  "common": {
+    "appName": "GusCompanyFinder",
+    "loading": "Loading...",
+    "loadingData": "Loading data...",
+    "unknownError": "Unknown error",
+    "fetchError": "Failed to fetch data",
+    "noResults": "No results",
+    "noData": "No data",
+    "back": "Back",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {{current}} of {{total}}",
+    "variables": "variables",
+    "subtopics": "{{count}} subtopics",
+    "level": "level {{level}}",
+    "unit": "Unit",
+    "poland": "Poland",
+    "region": "Region",
+    "dataSource": "Data: GUS Local Data Bank",
+    "apiBdl": "BDL API"
+  },
+  "nav": {
+    "home": "Home",
+    "population": "Population",
+    "subjects": "Subjects",
+    "variables": "Variables",
+    "units": "Units"
+  },
+  "home": {
+    "title": "GusCompanyFinder",
+    "description": "Browse GUS statistical data on the economy, society and environment for municipalities, counties, voivodeships and all of Poland.",
+    "populationDashboard": "Population dashboard",
+    "browseSubjects": "Browse subjects",
+    "searchVariables": "Search variables",
+    "territorialUnits": "Territorial units"
+  },
+  "subjects": {
+    "title": "Main subjects",
+    "subtopics": "Subtopics: {{name}}",
+    "breadcrumb": "Subjects"
+  },
+  "variables": {
+    "title": "Statistical variables",
+    "searchPlaceholder": "Search variable by name...",
+    "breadcrumb": "Variables"
+  },
+  "units": {
+    "title": "Territorial units",
+    "subunits": "Subunits: {{name}}",
+    "searchPlaceholder": "Search unit by name...",
+    "breadcrumb": "Units"
+  },
+  "data": {
+    "noDataForVariable": "No data for this variable"
+  },
+  "population": {
+    "title": "Population in Poland over the years",
+    "loading": "Loading population data...",
+    "loadError": "Failed to load data",
+    "backendHint": "Make sure the Spring Boot backend is running on port 8080.",
+    "kpiLabel": "Population",
+    "mapMetricLabel": "Map indicator",
+    "years": "Years",
+    "voivodeships": "Voivodeships",
+    "allPoland": "All of Poland",
+    "noMapData": "no data",
+    "trendTitle": "Population over the years",
+    "loadingChart": "Loading chart...",
+    "noDataForYears": "No data for selected years",
+    "genderTitle": "Gender breakdown",
+    "noGenderData": "No gender data",
+    "females": "Females",
+    "males": "Males",
+    "age0to4Title": "Persons aged 0–4",
+    "noAgeData": "No data for age 0–4",
+    "economicTitle": "Population by economic age groups",
+    "noEconomicData": "No data for age groups",
+    "preWorking": "Pre-working age",
+    "working": "Working age",
+    "postWorking": "Post-working age",
+    "metricGroups": {
+      "basic": "Basic",
+      "age": "Age",
+      "economic": "Economic age groups"
+    },
+    "metrics": {
+      "total": "Total population",
+      "males": "Males",
+      "females": "Females",
+      "age0": "Age 0",
+      "age1": "Age 1",
+      "age2": "Age 2",
+      "age3": "Age 3",
+      "age4": "Age 4",
+      "preWorking": "Pre-working age",
+      "working": "Working age",
+      "postWorking": "Post-working age"
+    }
+  },
+  "voivodeships": {
+    "dolnoslaskie": "LOWER SILESIAN",
+    "kujawskoPomorskie": "KUYAVIAN-POMERANIAN",
+    "lubelskie": "LUBELSKIE",
+    "lubuskie": "LUBUSZ",
+    "lodzkie": "ŁÓDŹ",
+    "mazowieckie": "MASOVIAN",
+    "malopolskie": "LESSER POLAND",
+    "opolskie": "OPOLE",
+    "podkarpackie": "SUBCARPATHIAN",
+    "podlaskie": "PODLASKIE",
+    "pomorskie": "POMERANIAN",
+    "slaskie": "SILESIAN",
+    "swietokrzyskie": "HOLY CROSS",
+    "warminskoMazurskie": "WARMIA-MASURIA",
+    "wielkopolskie": "GREATER POLAND",
+    "zachodniopomorskie": "WEST POMERANIAN"
+  },
+  "language": {
+    "label": "Language",
+    "pl": "Polski",
+    "en": "English"
+  }
+}
